@@ -112,4 +112,34 @@ function finderName(param, value) {
     return "No es un array";
   }
 }
-
+// Iteración #8
+const counterWords = [
+  "code",
+  "repeat",
+  "eat",
+  "sleep",
+  "code",
+  "enjoy",
+  "sleep",
+  "code",
+  "enjoy",
+  "upgrade",
+  "code",
+];
+function repeatCounter(param) {
+  let result = [];
+  let counter = [];
+  if (Array.isArray(param)) {
+    param.forEach((d) => {
+      if (counter.indexOf(d) < 0) {
+        counter.push(d);
+        result.push([d, 1]);
+      } else {
+        result[counter.indexOf(d)][1]++;
+      }
+    });
+    return result;
+  } else {
+    return "No es un array";
+  }
+}
