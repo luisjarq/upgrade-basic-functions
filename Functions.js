@@ -64,4 +64,26 @@ function averageWord(param) {
     return "No es un array";
   }
 }
-
+// Iteración #6
+const duplicates = [
+    'sushi',
+    'pizza',
+    'burger',
+    'potatoe',
+    'pasta',
+    'ice-cream',
+    'pizza',
+    'chicken',
+    'onion rings',
+    'pasta',
+    'soda'
+  ];
+  function removeDuplicates(param) {
+      if (Array.isArray(param)) {        
+        let unique = new Set()
+        param.forEach((d) => unique.add(d));
+        return unique;
+      } else {
+        return "No es un array";
+      }
+  }
