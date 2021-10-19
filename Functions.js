@@ -6,3 +6,17 @@ function sum(numberOne, numberTwo) {
     return numberTwo;
   }
 }
+//Iteración #2
+const avengers = ['Hulk', 'Thor', 'IronMan', 'Captain A.', 'Spiderman', 'Captain M.'];
+function findLongestWord(param) {
+    if(Array.isArray(param)){
+        let len = [];
+        param.forEach((a) =>len.push(a.length))
+        let index = len.map(x=> x);
+        let max = len.sort((a,b) => a-b).pop()
+        return param[index.indexOf(max)];
+    }
+    else{
+        return 'No es un array';
+    }
+}
