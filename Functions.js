@@ -37,19 +37,10 @@ function sumAll(param) {
   }
 }
 // Iteración #4
-const mixedElements = [6, 1, "Rayo", 1, "vallecano", "10", "upgrade", 8, "hub"];
-
-function averageWord(param) {
+const numbers = [12, 21, 38, 5, 45, 37, 6];
+function average(param) {
   if (Array.isArray(param)) {
-    let numbers = [];
-    param.forEach((d) => {
-      if (typeof d == "string") {
-        numbers.push(d.length);
-      } else {
-        numbers.push(d);
-      }
-    });
-    return numbers.reduce((a, b) => a + b);
+      return param.reduce((a, b) => a + b)/ numbers.length;
   } else {
     return "No es un array";
   }
