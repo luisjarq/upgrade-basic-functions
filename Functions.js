@@ -41,7 +41,7 @@ const numbers = [12, 21, 38, 5, 45, 37, 6];
 
 function average(param) {
   if (Array.isArray(param)) {
-      return param.reduce((a, b) => a + b)/ numbers.length;
+    return param.reduce((a, b) => a + b) / numbers.length;
   } else {
     return "No es un array";
   }
@@ -59,31 +59,57 @@ function averageWord(param) {
         numbers.push(d);
       }
     });
-    return numbers.reduce((a, b) => a + b)/numbers.length;
+    return numbers.reduce((a, b) => a + b) / numbers.length;
   } else {
     return "No es un array";
   }
 }
 // Iteración #6
 const duplicates = [
-    'sushi',
-    'pizza',
-    'burger',
-    'potatoe',
-    'pasta',
-    'ice-cream',
-    'pizza',
-    'chicken',
-    'onion rings',
-    'pasta',
-    'soda'
-  ];
-  function removeDuplicates(param) {
-      if (Array.isArray(param)) {        
-        let unique = new Set()
-        param.forEach((d) => unique.add(d));
-        return unique;
-      } else {
-        return "No es un array";
-      }
+  "sushi",
+  "pizza",
+  "burger",
+  "potatoe",
+  "pasta",
+  "ice-cream",
+  "pizza",
+  "chicken",
+  "onion rings",
+  "pasta",
+  "soda",
+];
+function removeDuplicates(param) {
+  if (Array.isArray(param)) {
+    let unique = new Set();
+    param.forEach((d) => unique.add(d));
+    return unique;
+  } else {
+    return "No es un array";
   }
+}
+// Iteración #7
+const nameFinder = [
+  "Peter",
+  "Steve",
+  "Tony",
+  "Natasha",
+  "Clint",
+  "Logan",
+  "Xabier",
+  "Bruce",
+  "Peggy",
+  "Jessica",
+  "Marc",
+];
+function finderName(param, value) {
+  if (Array.isArray(param, value)) {
+    if (param.indexOf(value) > 0) {
+      return [true, param.indexOf(value)];
+    } else {
+      return false;
+    }
+  } else {
+    return "No es un array";
+  }
+}
+
